@@ -800,3 +800,127 @@ body {
   height: 1px;
   background: rgba(154, 133, 95, .5);
 }
+
+/* --------------------------------------------------------------------------
+   Extended set: nine additional beasts
+   -------------------------------------------------------------------------- */
+
+.card--fenghuang {
+  --gold: #d9a25f; --gold-soft: rgba(217, 162, 95, .55); --gold-bright: #ffe4b4;
+  --seal: #a8392b; --shade: #140806;
+  --tint: 12, 7, 3; --aura: 2, 6, 8; --mist: 255, 230, 190; --glow: 255, 236, 196;
+}
+.card--xuanwu {
+  --gold: #9fb9bd; --gold-soft: rgba(159, 185, 189, .55); --gold-bright: #d9eef0;
+  --seal: #8f3027; --shade: #03080d;
+  --tint: 2, 6, 10; --aura: 0, 2, 6; --mist: 190, 225, 236; --glow: 205, 238, 248;
+}
+.card--zhuque {
+  --gold: #d99a63; --gold-soft: rgba(217, 154, 99, .55); --gold-bright: #ffe0b8;
+  --seal: #a8392b; --shade: #120404;
+  --tint: 14, 4, 4; --aura: 5, 1, 1; --mist: 255, 205, 175; --glow: 255, 214, 186;
+}
+.card--chongming {
+  --gold: #d7b36e; --gold-soft: rgba(215, 179, 110, .55); --gold-bright: #fff0c8;
+  --seal: #a8392b; --shade: #0d0b05;
+  --tint: 10, 8, 3; --aura: 4, 4, 2; --mist: 255, 240, 210; --glow: 255, 242, 204;
+}
+.card--baihu {
+  --gold: #b9c3c8; --gold-soft: rgba(185, 195, 200, .55); --gold-bright: #eff8fb;
+  --seal: #8f3027; --shade: #05080a;
+  --tint: 4, 5, 6; --aura: 0, 0, 0; --mist: 220, 235, 240; --glow: 235, 248, 255;
+}
+.card--chenghuang {
+  --gold: #d9b266; --gold-soft: rgba(217, 178, 102, .55); --gold-bright: #fff0c8;
+  --seal: #a8392b; --shade: #100a04;
+  --tint: 12, 8, 3; --aura: 5, 3, 0; --mist: 255, 230, 185; --glow: 255, 240, 202;
+}
+.card--qinglong {
+  --gold: #8fc7b2; --gold-soft: rgba(143, 199, 178, .55); --gold-bright: #d9fff1;
+  --seal: #8f3027; --shade: #030b08;
+  --tint: 2, 10, 8; --aura: 0, 5, 4; --mist: 205, 248, 234; --glow: 214, 255, 241;
+}
+.card--pixiu {
+  --gold: #d9ac5e; --gold-soft: rgba(217, 172, 94, .55); --gold-bright: #ffeac0;
+  --seal: #a8392b; --shade: #120b03;
+  --tint: 12, 8, 3; --aura: 6, 3, 0; --mist: 255, 225, 180; --glow: 255, 238, 198;
+}
+.card--jiuweihu {
+  --gold: #c99aa8; --gold-soft: rgba(201, 154, 168, .55); --gold-bright: #ffe4ec;
+  --seal: #a8392b; --shade: #0e0509;
+  --tint: 10, 4, 8; --aura: 5, 1, 4; --mist: 255, 218, 228; --glow: 255, 228, 238;
+}
+
+.front--new .front-media::after {
+  background:
+    linear-gradient(to bottom,
+      rgba(var(--tint), .30) 0%,
+      rgba(var(--tint), .03) 30%,
+      rgba(var(--tint), 0) 52%,
+      rgba(var(--tint), .30) 70%,
+      rgba(var(--tint), .78) 88%,
+      rgba(var(--tint), .94) 100%),
+    radial-gradient(78% 58% at 50% 44%,
+      rgba(var(--tint), 0) 42%,
+      rgba(var(--tint), .48) 100%);
+}
+
+.front--new .veil {
+  background:
+    linear-gradient(to bottom,
+      transparent 55%,
+      rgba(var(--tint), .22) 70%,
+      rgba(var(--tint), .72) 84%,
+      rgba(var(--tint), .97) 95%,
+      var(--shade) 100%);
+}
+
+.front--new .mist-front {
+  background: radial-gradient(58% 60% at 50% 50%, rgba(var(--mist), .30), rgba(var(--mist), 0) 72%);
+}
+
+.aura--new {
+  left: var(--ax, 50px);
+  top: var(--ay, 300px);
+  width: var(--aw, 600px);
+  height: var(--ah, 600px);
+  background: radial-gradient(circle,
+    rgba(var(--aura), .56) 0%,
+    rgba(var(--aura), .30) 36%,
+    rgba(var(--glow), .08) 58%,
+    rgba(var(--glow), 0) 74%);
+}
+
+.beast-art {
+  position: absolute;
+  left: var(--bx, 100px);
+  top: var(--by, 300px);
+  width: var(--bw, 500px);
+  z-index: 4;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 0 9px rgba(var(--glow), .70))
+    drop-shadow(0 0 26px rgba(var(--glow), .42));
+}
+
+.beast-art--glow {
+  z-index: 3;
+  filter: blur(8px) brightness(1.5);
+  opacity: .32;
+}
+
+.back--new {
+  background: radial-gradient(120% 85% at 18% 0%, #fdf8ec 0%, #f3e8d2 45%, #e7d8bd 100%);
+}
+
+.back--new .back-watermark img {
+  filter: brightness(0);
+}
+
+.seal.seal--long {
+  font-size: 21px;
+  letter-spacing: 0;
+}
+.back-seal.seal--long {
+  font-size: 25px;
+}

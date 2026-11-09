@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>青龙 · 双面卡牌</title>
+<style>
+html,body{margin:0;padding:0;width:1760px;height:1260px;overflow:hidden;background:#070b0e;font-family:"Noto Serif SC","SimSun",serif}
+.sheet{position:relative;width:1760px;height:1260px;padding:34px 100px 0;box-sizing:border-box;overflow:hidden;
+  background:
+    radial-gradient(55% 55% at 22% 38%, rgba(50,92,112,.25), rgba(50,92,112,0) 65%),
+    radial-gradient(45% 50% at 82% 46%, rgba(34,64,80,.2), rgba(34,64,80,0) 70%),
+    radial-gradient(120% 100% at 50% 110%, rgba(0,0,0,.85), rgba(0,0,0,0) 60%),
+    linear-gradient(160deg,#0a1117 0%,#060a0d 55%,#05080b 100%)}
+.sheet::before{content:"";position:absolute;inset:0;background-image:url('grain.svg');background-size:240px;opacity:.14;mix-blend-mode:overlay;pointer-events:none}
+.frame-rule{position:absolute;inset:18px;border:1px solid rgba(201,168,106,.22);pointer-events:none}
+.head{position:relative;display:flex;align-items:flex-end;justify-content:space-between;height:64px;border-bottom:1px solid rgba(201,168,106,.28);padding-bottom:12px}
+.head .kicker{font-size:10px;letter-spacing:.44em;color:#b99a63}
+.head h1{margin:8px 0 0;font-size:28px;line-height:1;font-weight:600;letter-spacing:.16em;color:#f3eee2}
+.head h1 span{color:#c9a86a;font-weight:400;font-size:16px;letter-spacing:.22em;margin-left:14px}
+.head .meta{text-align:right;font-size:9.5px;line-height:2;letter-spacing:.28em;color:#8d816c}
+.cards{position:relative;display:flex;gap:60px;margin-top:18px}
+figure{margin:0;width:750px}
+figure img{display:block;width:750px;height:1050px;border-radius:12px;border:1px solid rgba(201,168,106,.32);box-shadow:0 34px 80px rgba(0,0,0,.68);background:#0b1116}
+figcaption{display:flex;align-items:center;justify-content:space-between;margin-top:12px;font-size:10px;letter-spacing:.3em;color:#a3957b;text-transform:uppercase}
+figcaption b{font-weight:500;color:#d8c49a;font-size:11px;letter-spacing:.26em}
+.foot{position:relative;display:flex;align-items:center;justify-content:space-between;margin-top:12px;font-size:9px;letter-spacing:.24em;color:#6f6657;text-transform:uppercase}
+.foot .mid{display:flex;align-items:center;gap:10px}
+.foot .mid::before,.foot .mid::after{content:"";width:28px;height:1px;background:rgba(150,128,90,.45)}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="frame-rule"></div>
+  <div class="head">
+    <div>
+      <div class="kicker">山海异兽录 · 神兽卡牌</div>
+      <h1>青龙<span>东皋青野 · QING LONG</span></h1>
+    </div>
+    <div class="meta">NO.09 / 东方七宿<br>双面卡牌 · 1500 × 2100 PX</div>
+  </div>
+
+  <div class="cards">
+    <figure>
+      <img src="renders/qinglong-front.png" alt="青龙卡牌正面">
+      <figcaption><b>正面 · FRONT</b><span>东皋青野 · 东方木德 · 角亢司春</span></figcaption>
+    </figure>
+    <figure>
+      <img src="renders/qinglong-back.png" alt="青龙卡牌背面">
+      <figcaption><b>背面 · BACK</b><span>神兽图鉴 · 分类 / 特点 / 功用 / 原型</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="foot">
+    <span>图源 · 《古今图书集成 · 禽虫典》 · 场景 · 《千里江山图》（公有领域）</span>
+    <span class="mid">山海异兽录 · 四象</span>
+    <span>MYTHIC BEAST CODEX</span>
+  </div>
+</div>
+</body>
+</html>

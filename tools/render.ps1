@@ -22,14 +22,15 @@ $edgeCandidates = @(
 $edge = $edgeCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
 if (-not $edge) { throw "No Chromium browser found (Chrome or Edge)." }
 
-$faces = @(
-  @{ name = "baize-front"; file = "baize-front.html"; width = 750; height = 1050; scale = 2 },
-  @{ name = "baize-back";  file = "baize-back.html";  width = 750; height = 1050; scale = 2 },
-  @{ name = "qilin-front"; file = "qilin-front.html"; width = 750; height = 1050; scale = 2 },
-  @{ name = "qilin-back";  file = "qilin-back.html";  width = 750; height = 1050; scale = 2 },
-  @{ name = "baize-card";  file = "present-baize.html"; width = 1760; height = 1260; scale = 2 },
-  @{ name = "qilin-card";  file = "present-qilin.html"; width = 1760; height = 1260; scale = 2 }
-)
+$ids = @("baize", "qilin", "fenghuang", "xuanwu", "zhuque", "chongming", "baihu", "chenghuang", "qinglong", "pixiu", "jiuweihu")
+$faces = @()
+foreach ($id in $ids) {
+  $faces += @{ name = "$id-front"; file = "$id-front.html"; width = 750; height = 1050; scale = 2 }
+  $faces += @{ name = "$id-back";  file = "$id-back.html";  width = 750; height = 1050; scale = 2 }
+}
+foreach ($id in $ids) {
+  $faces += @{ name = "$id-card"; file = "present-$id.html"; width = 1760; height = 1260; scale = 2 }
+}
 
 foreach ($face in $faces) {
   if ($Only -and ($Only -notcontains $face.name)) { continue }
